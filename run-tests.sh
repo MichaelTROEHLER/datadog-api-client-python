@@ -20,6 +20,7 @@ fi
 
 # Install test dependencies
 python -m pip install -e .
+python -m pip install -e git+https://github.com/DataDog/dd-trace-py@jirikuncar/pytest#egg=ddtrace
 # Run tests
 set +e
 python -m pytest
