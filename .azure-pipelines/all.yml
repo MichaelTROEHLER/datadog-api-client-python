@@ -47,8 +47,10 @@ jobs:
     datadog-agent: datadog-agent
   steps:
     - script: |
-        python -m pip install --user -e .[apm,tests]
-        python -m pip install --user -e git+https://github.com/DataDog/dd-trace-py@jirikuncar/pytest#egg=ddtrace
+        python -m pip install --upgrade pip setuptools
+        python -m pip install cython
+        python -m pip install -e .[apm,tests]
+        python -m pip install -e git+https://github.com/DataDog/dd-trace-py@jirikuncar/pytest#egg=ddtrace
       displayName: Install package
     - script: ./run-tests.sh
       displayName: Run integration tests
