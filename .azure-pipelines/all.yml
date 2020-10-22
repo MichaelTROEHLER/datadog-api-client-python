@@ -19,7 +19,7 @@ schedules:
 resources:
   containers:
   - container: datadog-agent
-    image: datadog/agent:7
+    image: datadog/agent:latest
     options: --health-cmd="exit 0" --health-interval=1s
     ports:
     - 8125:8125
@@ -49,7 +49,7 @@ jobs:
     - script: |
         python -m pip install --upgrade pip setuptools
         python -m pip install cython
-        python -m pip install -e .[tests]
+        python -m pip install -e .[apm,tests]
         python -m pip install -U --pre --no-index --find-links=artifact/ ddtrace
       displayName: Install package
     - script: ./run-tests.sh
