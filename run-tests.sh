@@ -22,10 +22,10 @@ fi
 python -m pip install -e .
 # Run tests
 set +e
-python -m pytest --ddtrace
+python -m pytest
 RESULT=$?
 if [ "$RERECORD_FAILED_TESTS" == "true" -a "$RESULT" -ne 0 ]; then
-    RECORD=true python -m pytest --ddtrace --last-failed
+    RECORD=true python -m pytest --last-failed
     RESULT=$?
 fi
 exit $RESULT
