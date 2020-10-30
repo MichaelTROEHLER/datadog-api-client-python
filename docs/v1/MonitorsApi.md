@@ -183,7 +183,7 @@ with datadog_api_client.v1.ApiClient(configuration) as api_client:
             silenced={
                 "key": 1,
             },
-            synthetics_check_id=1,
+            synthetics_check_id="synthetics_check_id_example",
             threshold_windows=MonitorThresholdWindowOptions(
                 recovery_window="recovery_window_example",
                 trigger_window="trigger_window_example",
@@ -199,6 +199,7 @@ with datadog_api_client.v1.ApiClient(configuration) as api_client:
             timeout_h=1,
         ),
         overall_state=MonitorOverallStates("Alert"),
+        priority=1,
         query="query_example",
         state=MonitorState(
             groups={
@@ -631,7 +632,7 @@ with datadog_api_client.v1.ApiClient(configuration) as api_client:
             silenced={
                 "key": 1,
             },
-            synthetics_check_id=1,
+            synthetics_check_id="synthetics_check_id_example",
             threshold_windows=MonitorThresholdWindowOptions(
                 recovery_window="recovery_window_example",
                 trigger_window="trigger_window_example",
@@ -647,6 +648,7 @@ with datadog_api_client.v1.ApiClient(configuration) as api_client:
             timeout_h=1,
         ),
         overall_state=MonitorOverallStates("Alert"),
+        priority=1,
         query="query_example",
         state=MonitorState(
             groups={
@@ -789,7 +791,7 @@ with datadog_api_client.v1.ApiClient(configuration) as api_client:
             silenced={
                 "key": 1,
             },
-            synthetics_check_id=1,
+            synthetics_check_id="synthetics_check_id_example",
             threshold_windows=MonitorThresholdWindowOptions(
                 recovery_window="recovery_window_example",
                 trigger_window="trigger_window_example",
@@ -805,6 +807,7 @@ with datadog_api_client.v1.ApiClient(configuration) as api_client:
             timeout_h=1,
         ),
         overall_state=MonitorOverallStates("Alert"),
+        priority=1,
         query="query_example",
         state=MonitorState(
             groups={
